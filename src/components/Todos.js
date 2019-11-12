@@ -3,9 +3,13 @@ import TodoItem from './Todoitem'
 import PropTypes from 'prop-types'
 
 class ToDos extends Component {
+    // markComplete = () => {
+    //     console.log('---->', 'hiiii')
+    // }
   render() {
     return this.props.todos.map((todo) => (
-       <TodoItem key={todo.id} todo={todo}/>
+       <TodoItem key={todo.id} todo={todo} markComplete={this.props.markComplete}
+       delTodo= {this.props.delTodo}/>
     ))
   }
 }
